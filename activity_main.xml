@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="#FFFFFF"
+    android:id="@+id/main"
+    tools:context=".MainActivity">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conversor de Unidades de Temperatura"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#007F00"
+        android:gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <!-- Imagen -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/_36caec87be0bcf3feeb02ec8c15e658" />
+
+    <!-- Descripción -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="El conversor de unidades se usa introduciendo el valor numérico de temperatura en el campo 'Valor', y seleccionando la unidad con ayuda de los botones °C, °F o °K."
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingBottom="12dp"/>
+
+    <!-- Campo de entrada -->
+    <EditText
+        android:id="@+id/et_valor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Valor"
+        android:inputType="numberDecimal"
+        android:gravity="center"
+        android:background="@android:color/darker_gray"
+        android:padding="8dp"
+        android:textSize="18sp"/>
+
+    <!-- Botones de conversión -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="12dp">
+
+        <Button
+            android:id="@+id/btn_celsius"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:backgroundTint="#078322"
+            android:text="°C"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:cornerRadius="0dp" />
+
+        <Button
+            android:id="@+id/btn_fahrenheit"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#078322"
+            android:text="°F"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:cornerRadius="0dp" />
+
+        <Button
+            android:id="@+id/btn_kelvin"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#078322"
+            android:text="°K"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:cornerRadius="0dp" />
+    </LinearLayout>
+
+    <!-- Tabla de resultados -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <TextView
+                android:layout_weight="1"
+                android:text="Valor"
+                android:textStyle="bold"
+                android:background="#078322"
+                android:textColor="#FFFFFF"
+                android:padding="8dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:background="#078322"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Unidad"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/tv_celsius"
+                android:text="0"
+                android:padding="8dp"
+                android:gravity="center"/>
+            <TextView
+                android:text="°C"
+                android:padding="8dp"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/tv_fahrenheit"
+                android:text="0"
+                android:padding="8dp"
+                android:gravity="center"/>
+            <TextView
+                android:text="°F"
+                android:padding="8dp"
+                android:gravity="center"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:id="@+id/tv_kelvin"
+                android:text="0"
+                android:padding="8dp"
+                android:gravity="center"/>
+            <TextView
+                android:text="°K"
+                android:padding="8dp"
+                android:gravity="center"/>
+        </TableRow>
+
+    </TableLayout>
+
+
+</LinearLayout>
